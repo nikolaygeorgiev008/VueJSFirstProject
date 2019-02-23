@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-sm-9">
     <b-input-group append="Намери">
       <b-form-input :pholder="pholder" v-model="search" @input="input"></b-form-input>
     </b-input-group>

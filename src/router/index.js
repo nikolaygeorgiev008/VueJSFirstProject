@@ -1,14 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Login from '../components/login';
 import Navigation from '../components/navigation/Navigation';
-import Trending from '../components/trending/Trending';
-import Movies from '../components/movies/Movies';
-import Series from '../components/series/Series';
-import Favorite from '../components/favorite/Favorite';
-import MovieDetails from '../components/moviedetails/MovieDetails';
-import DiscoverMovies from '../components/discover/DiscoverMovies';
 import Footer from '../components/footer/Footer';
+import Home from '../components/common/Home';
+import BookList from '../components/pages/BookList';
+import WishList from '../components/pages/WishList'
+import RecommendedBooks from '../components/pages/RecommendedBooks';
 
 Vue.use(Router);
 
@@ -16,62 +13,36 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Login',
+      name: 'Home',
       components: {
-        default: Login,
+        navigation: Navigation,
+        default: Home,
       },
     },
     {
-      path: '/discover',
-      name: 'DiscoverMovies',
+      path: '/wish-list',
+      name: 'WishList',
       components: {
         navigation: Navigation,
-        default: DiscoverMovies,
+        default: WishList,
         footer: Footer,
       },
     },
     {
-      path: '/trending',
-      name: 'Trending',
+      path: '/books',
+      name: 'Books',
       components: {
         navigation: Navigation,
-        default: Trending,
+        default: BookList,
         footer: Footer,
       },
     },
     {
-      path: '/movies',
-      name: 'Movies',
+      path: '/recommended-books',
+      name: 'Recommended Books',
       components: {
         navigation: Navigation,
-        default: Movies,
-        footer: Footer,
-      },
-    },
-    {
-      path: '/series',
-      name: 'Series',
-      components: {
-        navigation: Navigation,
-        default: Series,
-        footer: Footer,
-      },
-    },
-    {
-      path: '/favorite',
-      name: 'Favorite',
-      components: {
-        navigation: Navigation,
-        default: Favorite,
-        footer: Footer,
-      },
-    },
-    {
-      path: '/movie/:id',
-      name: 'Movie',
-      components: {
-        navigation: Navigation,
-        default: MovieDetails,
+        default: RecommendedBooks,
         footer: Footer,
       },
     },

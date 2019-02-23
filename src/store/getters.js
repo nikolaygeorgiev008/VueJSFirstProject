@@ -1,6 +1,6 @@
 export default {
   getMovieById: state => id =>
-    state.movies.find(movie => movie.id === id),
-  getRemainingFavMovies: state => id =>
-    state.favoriteMovies.filter(movie => movie.id !== id)  
+    state.books.find(book => book.id === id),
+  getRemainingWishList: state => id =>
+    state.wishList.filter(book => book.id !== id)  
 };

@@ -1,7 +1,7 @@
 <template>
   <footer class="footer bg-info">
       <div class="container">
-        <span class="text-white">Software technologies - Master Course</span>
+        <span class="text-white">Find your book :)</span>
       </div>
     </footer>
 </template>

@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: 'st-movie-rating',
+    name: 'st-book-rating',
     props: {
       rating: {
         type: Number,

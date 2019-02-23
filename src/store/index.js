@@ -7,15 +7,9 @@ import getters from './getters';
 Vue.use(Vuex);
 
 const state = {
-  movies: [],
-  currentPage: 1,
+  books: [],
   totalResults: 0,
-  isLoading: false,
-  resultType: 'movie',
-  title: '',
-  favoriteMovies: [],
-  currentMovie: null,
-  movieGenres: [],
+  wishList: [],
 };
 
 const store = new Vuex.Store({

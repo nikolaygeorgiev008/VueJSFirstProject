@@ -4,6 +4,8 @@ import constants from '../constants';
 export default {
 
   get(url, success, failure, params) {
+    console.log(url)
+    console.log(params)
     this.request({
       method: 'get',
       url,
@@ -51,6 +53,8 @@ export default {
     }, options);
 
     data.params = Object.assign(options.params, {api_key: constants.apiKey});
+
+    console.log(data)
     axios(data)
       .then((response) => {
         if (options.success) {

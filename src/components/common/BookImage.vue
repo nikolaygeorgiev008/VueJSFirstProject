@@ -1,25 +1,24 @@
 <template>
     <div class="image-container">
-      <img :src="getPoster" class="movie-thumbnail"/>
+      <img :src="getPoster" class="book-thumbnail"/>
     </div>
 </template>
 
 <script>
   import constants from '../../constants';
   export default {
-    name: 'st-movie-image',
+    name: 'st-book-image',
     props: {
       poster: {
-        type: String,
+        smallThumbnail: String,
+        thumbnail: String
       },
     },
     computed: {
       getPoster() {
-        let poster = this.poster;
+        let poster = this.poster.smallThumbnail;
         if (!poster) {
           poster = '/static/images/default.jpg';
-        } else {
-          poster = constants.basePosterURL + poster;
         }
         return poster;
       },
@@ -28,7 +27,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .movie-thumbnail {
+  .book-thumbnail {
     width: 189px;
   }
 </style>

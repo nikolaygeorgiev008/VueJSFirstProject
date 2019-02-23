@@ -9,6 +9,7 @@ import './assets/styles.scss';
 import router from './router';
 import store from './store/';
 
+
 Vue.use(VueBootstrap);
 Vue.use(VueMoment);
 
